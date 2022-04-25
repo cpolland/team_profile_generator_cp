@@ -69,4 +69,4 @@ function addMember (){
     }
 }
 
-addManager();
+addManager(); 
