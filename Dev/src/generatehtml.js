@@ -1,5 +1,4 @@
 const generateTeam = team => {
-    // create the manager html
     const generateManager = manager => {
         return `
         <div class="card employee-card">
@@ -17,8 +16,6 @@ const generateTeam = team => {
     </div>
         `;
     };
-    // create the html for engineers
-    // create the html for interns
     const array = [];
     array.push(team
         .filter(employee => employee.getRole() === "Manager")
@@ -36,7 +33,6 @@ const generateTeam = team => {
     );
     return array.join("");
 }
-// export function to generate entire page
 module.exports = team => {
     return `
     <!DOCTYPE html>
@@ -48,14 +44,14 @@ module.exports = team => {
     <title>My Team</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/c502137733.js"></script>
+   
+  
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 jumbotron mb-3 team-heading">
-                <h1 class="text-center">My Cool Team</h1>
+                <h1 class="text-center">The Team</h1>
             </div>
         </div>
     </div>

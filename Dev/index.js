@@ -43,12 +43,84 @@ function addManager (){
         addMember()
         
     })}
+
+    function addEngineer (){
+        inquirer.prompt([
+           {
+               type: "input",
+               name: "Name",
+               message: "What is the name of the employee?"
+    
+           },
+        {
+            type: "input",
+            name: "ID",
+            message: "What is the Employees ID"
+    
+        },
+        {
+            type: "input",
+            name: "Github",
+            message: "What is the employee's Github Username?"
+    
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "What is the email?"
+    
+        },
+        
+    
+           
+        ]).then(response =>{
+            teamMembers.push(new Engineer(response.Name,response.email,response.ID,response.Github))
+            addMember()
+            
+        })}
+    
+
+function addIntern (){
+    inquirer.prompt([
+       {
+           type: "input",
+           name: "Name",
+           message: "What is the name of the emplyee"
+
+       },
+    {
+        type: "input",
+        name: "ID",
+        message: "What is the Employees ID"
+
+    },
+    {
+        type: "input",
+        name: "school",
+        message: "What school does/did the intern attend?"
+
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "What is the email?"
+
+    },
+    
+
+       
+    ]).then(response =>{
+        teamMembers.push(new Intern(response.Name,response.email,response.ID,response.school))
+        addMember()
+        
+    })}
+    
 function addMember (){
     inquirer.prompt([
         {
             type: "list",
             name: "Position",
-            message: "What kind of employee would you like to add?",
+            message: "Which employee would you lke to add?",
             choices: ['Engineer','Intern','Manager','none']
     
         },  
@@ -69,4 +141,7 @@ function addMember (){
     }
 }
 
+addMember();
 addManager(); 
+addEngineer();
+addIntern();
