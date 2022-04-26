@@ -16,6 +16,41 @@ const generateTeam = team => {
     </div>
         `;
     };
+    const generateEngineer = engineer => {
+        return `
+        <div class="card employee-card">
+        <div class="card-header">
+            <h2 class="card-titengineer.getName()}</h2>
+            <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${engineer.getRole()}</h3>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item">ID: ${engineer.getId()}</li>
+                <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+                <li class="list-group-item">Office number: ${engineer.getGithub()}</li>
+            </ul>
+        </div>
+    </div>
+        `;
+    };
+    const generateIntern = engineer => {
+        return `
+        <div class="card employee-card">
+        <div class="card-header">
+            <h2 class="card-titengineer.getName()}</h2>
+            <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${engineer.getRole()}</h3>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item">ID: ${engineer.getId()}</li>
+                <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+                <li class="list-group-item">Office number: ${engineer.getSchool()}</li>
+            </ul>
+        </div>
+    </div>
+        `;
+    };
+
     const array = [];
     array.push(team
         .filter(employee => employee.getRole() === "Manager")

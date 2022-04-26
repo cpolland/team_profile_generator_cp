@@ -128,9 +128,9 @@ function addMember (){
         if(response.Position === "Manager"){
             addManager()
         } else if (response.Position === "Engineer"){
-            //add engineer 
+            addEngineer()
         }else if (response.Position === "Intern"){
-
+            addIntern()
         }else if (response.Position === "none"){
             generateTeamCards()
         }
@@ -142,6 +142,5 @@ function addMember (){
 }
 
 addMember();
-addManager(); 
-addEngineer();
-addIntern();
+
+
